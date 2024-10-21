@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
+from django.urls import reverse
+
 def hello(request):
-    return HttpResponse("<h1>Y weno 400 y deberías poder hacer esto</h1>")
+    # Genera la URL dinámica
+    framqueli_url = reverse('FraMqueli')
+    # Retorna el HTML con la URL generada
+    return HttpResponse(f"""
+        <h1>Esto es el incio, hay que adornarlo para describirnos y parecer pros</h1>
+        <a href="{framqueli_url}">FraMqueli</a>
+    """)
