@@ -7,5 +7,5 @@ class Project(models.Model):
     title = CharField(max_length=100)
     description = CharField(max_length=250)
     image = ImageField(upload_to='project/images/')
-    url = URLField(blank=True)
+    url = CharField(max_length=200, blank=True, null=True)
     

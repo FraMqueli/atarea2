@@ -10,3 +10,7 @@ def portada(request):
 
 def post(request):
     return render(request, 'post.html')
+
+def EDD(request):
+    project = Project.objects.all()
+    return render(request, 'EDD.html', {'project': project})
